@@ -1,4 +1,4 @@
-package com.example.hemal.myapplication;
+package com.mot.android.myapplication;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.hemal.myapplication", appContext.getPackageName());
+        assertEquals("com.mot.android.myapplication", appContext.getPackageName());
     }
 }

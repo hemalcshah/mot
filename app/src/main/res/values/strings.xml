@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="button_add">Add Point</string>
+    <string name="button_delete">Delete Point</string>
+    <string name="button_reset">Reset Points</string>
+
+    <string name="button_test">Test</string>
+
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
     <string name="button_save">Save</string>
     <string name="button_load">Load</string>
-    <string name="preference_file_key">com.example.hemal.myapplication.preference_file_key</string>
+    <string name="preference_file_key">com.mot.android.myapplication.preference_file_key</string>
     <string name="load_message">Loaded Message</string>
 </resources>

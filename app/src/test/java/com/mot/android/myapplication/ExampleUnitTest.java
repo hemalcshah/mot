@@ -1,4 +1,4 @@
-package com.example.hemal.myapplication;
+package com.mot.android.myapplication;
 
 import org.junit.Test;
 

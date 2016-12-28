@@ -4,39 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
-    <EditText android:id="@+id/edit_message"
 
-        android:layout_width="wrap_content"
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
+
+    <TextView
+        android:text="Hello Veer !!!"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_message" />
+        android:id="@+id/welcomeTextView"
+        android:fontFamily="sans-serif"
+        android:textSize="36sp" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Your total points are  : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pointsSummaryTextView"
+            android:fontFamily="sans-serif"
+            android:textSize="30sp" />
+
+        <TextView
+            android:text="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pointsTextView"
+            android:fontFamily="sans-serif"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="addPoint"
+            android:layoutDirection="ltr" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_delete"
+            android:onClick="deletePoint" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_reset"
+            android:onClick="resetPoint" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
-        android:onClick="sendMessage" />
+        android:onClick="testScreen"
+        android:text="@string/button_test" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_save"
-        android:onClick="saveMessage" />
+    <!--
+
+        <EditText android:id="@+id/edit_message"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_save"
+            android:onClick="saveMessage" />
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_load"
-        android:onClick="loadMessage" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_load"
+            android:onClick="loadMessage" />
 
 
-    <EditText android:id="@+id/load_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/load_message" />
-
+        <EditText android:id="@+id/load_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/load_message" />
+    -->
 </LinearLayout>
 <!--
 <?xml version="1.0" encoding="utf-8"?>
@@ -49,7 +159,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hemal.myapplication.MainActivity">
+    tools:context="com.mot.android.myapplication.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
