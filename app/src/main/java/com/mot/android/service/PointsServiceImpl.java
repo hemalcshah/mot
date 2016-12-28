@@ -58,7 +58,7 @@ public class PointsServiceImpl {
     public void decrementPoints(Context context, String userId ){
 
         Integer points = getPoints(context,userId);
-        
+
         if ( points > 0 ) {
             points = points - 1;
         }

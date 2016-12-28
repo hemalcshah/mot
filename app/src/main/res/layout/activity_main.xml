@@ -7,6 +7,20 @@
     android:orientation="vertical"
     android:weightSum="1">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <Spinner
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_spinner" />
+
+
+    </LinearLayout>
+
 
     <View
         android:layout_width="fill_parent"
@@ -19,7 +33,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/welcomeTextView"
         android:fontFamily="sans-serif"
-        android:textSize="36sp" />
+        android:textSize="24sp" />
 
 
     <View
@@ -39,7 +53,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/pointsSummaryTextView"
             android:fontFamily="sans-serif"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:text="10"
@@ -47,7 +61,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/pointsTextView"
             android:fontFamily="sans-serif"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_green_dark" />
 
     </LinearLayout>
 

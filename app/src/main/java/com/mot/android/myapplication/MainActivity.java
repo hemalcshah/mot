@@ -7,29 +7,61 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.mot.android.service.PointsServiceImpl;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     private final static PointsServiceImpl pointsService = PointsServiceImpl.getInstance();
 
-    String userId="veer";
+    String userId="Veer";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        renderPoints();
+        renderUsers();
+
+        userId= "Veer";
+
+        refreshUserDetails();
 
     }
 
+    public void refreshUserDetails(){
+
+        renderGreetings();
+        renderPoints();
+    }
+
+    private void renderGreetings() {
+
+        TextView pointsTextView = (TextView) findViewById(R.id.welcomeTextView);
+
+        pointsTextView.setText(" Hello "+  userId  +" !!! ");
+
+    }
+
+    public void renderUsers(){
+        Spinner spinner = (Spinner) findViewById(R.id.user_spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+               R.array.user_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+    }
 
     /** Called when the user clicks the Send button */
     public void addPoint(View view) {
@@ -136,5 +168,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+        System.out.println(" **-- Item selected : " + parent.getItemAtPosition(position));
+        userId = (String)parent.getItemAtPosition(position);
+        refreshUserDetails();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

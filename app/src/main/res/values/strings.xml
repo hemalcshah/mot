@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Kid Mot</string>
 
     <string name="button_add">Add Point</string>
     <string name="button_delete">Delete Point</string>
@@ -13,4 +13,12 @@
     <string name="button_load">Load</string>
     <string name="preference_file_key">com.mot.android.myapplication.preference_file_key</string>
     <string name="load_message">Loaded Message</string>
+
+    <string-array name="user_array">
+        <item>Veer</item>
+        <item>Isha</item>
+    </string-array>
+
+
+
 </resources>
